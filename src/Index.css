@@ -1,0 +1,26 @@
+/* This line imports the "Manrope" font family from Google Fonts, with various font weights ranging from 200 to 800. The display=swap parameter ensures that the text is displayed using a fallback font until the "Manrope" font is fully loaded. */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* The :root pseudo-class is used to define global CSS variables. These variables can then be used throughout the CSS to maintain consistency and make it easier to manage and update styles. */
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+}
+/* CSS Variables Defined
+--font-family: Sets the primary font family to "Manrope", with a fallback to sans-serif.
+--gradient-text: Defines a linear gradient that can be used for text.
+--gradient-bar: Defines a linear gradient that can be used for elements like bars or backgrounds.
+--color-bg: Sets the background color to a dark shade (#040C18).
+--color-footer: Sets a specific color for footer sections (#031B34).
+--color-blog: Sets a color for blog sections (#042c54).
+--color-text: Sets the primary text color (#81AFDD).
+--color-subtext: Sets a color for subtext or secondary text (#FF8A71). */
