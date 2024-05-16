@@ -1,0 +1,62 @@
+.fgproject__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+
+}
+
+.fgproject__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.fgproject__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.fgproject__navbar-links_logo img {
+    width: 62px;
+    height: 62px;
+}
+
+.fgproject__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.fgproject__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fgproject__navbar-links_container p,
+.fgproject__navbar-sign p,
+.fgproject__navbar-menu_container p {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.fgproject__navbar-sign button,
+.fgproject__navbar-menu_container button {
+    padding: .5rem 1rem;
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    background: #ff4820;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
