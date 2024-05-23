@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
 
 const Menu = () => (
   <>
-    <p><a href="#home" />Home</p>
-    <p><a href="#whatFGProject" />About F.G Project</p>
-    <p><a href="#possibility" />Interests</p>
-    <p><a href="#features" />Case Studies</p>
-    <p><a href="#blog" />Library</p>
+    <p><a href="#home">Home</a></p>
+    <p><a href="#whatFGProject" >About F.G Project</a></p>
+    <p><a href="#possibility" >Interests</a></p>
+    <p><a href="#features" >Case Studies</a></p>
+    <p><a href="#blog" >Library</a></p>
   </>
 )
-
-
 
 
 

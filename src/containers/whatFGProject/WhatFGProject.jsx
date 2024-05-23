@@ -4,7 +4,7 @@ import Feature from '../../components/feature/Feature';
 
 const WhatFGProject = () => {
   return (
-    <div className="fgproject__whatfgproject section__margin" id="wfgproject">
+    <div className="fgproject__whatfgproject section__margin" id="whatFGProject">
       <div className="fgproject__whatfgproject-feature">
         <Feature title="What is F.G.Project" text="My learning journey through full stack development." />
       </div>
