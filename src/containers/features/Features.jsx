@@ -27,17 +27,15 @@ const Features = () => {
       <div className="fgproject__features-heading">
 
         <h1 className="gradient__text">From a QA background to Full Stack Development</h1>
+
         <p>Story so far...</p>
 
       </div>
       <div className="fgproject__features-container">
 
         {featuresData.map((item, index) => (
-          <Feature title={item.title} text={item.text} index={item.title + index} />
-
+          <Feature title={item.title} text={item.text} key={item.title + index} />
         ))}
-
-
 
       </div>
     </div>
