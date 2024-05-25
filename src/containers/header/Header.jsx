@@ -10,7 +10,7 @@ const Header = () => {
           F.G.Project : My Full Stack Journey
         </h1>
         <p>
-          I love to code because it allows me to create innovative solutions and bring ideas to life, while collaborating with people brings diverse perspectives and enhances the creativity and efficiency of our projects. Together, we transform complex challenges into meaningful results.</p>
+        By combining a deep technical expertise through learning and a passion for open-source collaboration, I constantly strive for innovation while fostering a community that thrives on shared knowledge and collective growth.</p>
         <div className="fgproject__header-content__input">
 
           <input type='email' placeholder='Your Email Address'>
