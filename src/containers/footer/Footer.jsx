@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="fgproject__footer section__padding">
     <div className="fgproject__footer-heading">
-      <h1 className="gradient__text">Do you want to step in to the future before others</h1>
+      <h1 className="gradient__text">Visit often as content will be added on a daily basis!</h1>
     </div>
 
     {/* <div className="fgproject__footer-btn">
