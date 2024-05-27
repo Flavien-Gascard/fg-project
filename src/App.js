@@ -4,19 +4,23 @@ import './App.css'
 import { Navbar, Brand, CTA } from './components';
 import { Footer, Blog, Possibility, Features, WhatFGProject, Header } from './containers';
 
+
 const App = () => {
     return (
         <div className='App'>
-            <div className='gradient__bg'>
-                <Navbar />
-                <Header />
-            </div>
+            {/* <div className='gradient__bg'> */}
+            <Navbar />
+
+            
+
+            <Header />
+            {/* </div> */}
             <Brand />
             <WhatFGProject />
-            <Features />
-            <Possibility />
-            <CTA />
-            <Blog />
+            {/* <Features /> */}
+            {/* <Possibility /> */}
+            {/* <CTA /> */}
+            {/* <Blog /> */}
             <Footer />
         </div>
     )

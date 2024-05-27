@@ -33,10 +33,10 @@ const Navbar = () => {
           <Menu />
         </div>
       </div>
-      <div className="fgproject__navbar-sign">
+      {/* <div className="fgproject__navbar-sign">
         <p>Sign In</p>
         <button type='button'>Sign Up</button>
-      </div>
+      </div> */}
 
       <div className="fgproject__navbar-menu">
         {toggleMenu
@@ -49,10 +49,10 @@ const Navbar = () => {
             <div className="fgproject__navbar-menu_container-links">
               <Menu />
               </div>
-              <div className="fgproject__navbar-menu_container-links-sign">
+              {/* <div className="fgproject__navbar-menu_container-links-sign">
                 <p>Sign In</p>
                 <button type='button'>Sign Up</button>
-              </div>
+              </div> */}
             </div>
         )}
       </div>

@@ -3,11 +3,15 @@ import javalogo from '../../assets/java-logo.png';
 import awslogo from '../../assets/aws-logo.png';
 import dockerlogo from '../../assets/docker-logo.png';
 import githublogo from '../../assets/github-logo.png';
+import kuberneteslogo from '../../assets/kubernetes-logo.png'
+import javascriptLogo from '../../assets/javascript-logo.png'
 
 export {
     reactlogo,
     javalogo,
+    javascriptLogo,
     awslogo,
     dockerlogo,
-    githublogo
+    githublogo,
+    kuberneteslogo
 }
