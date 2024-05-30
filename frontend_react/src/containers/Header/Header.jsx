@@ -2,6 +2,8 @@ import React from 'react'
 import './Header.scss'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
+import {AppWrap} from '../../wrapper'
+
 
 const scaleVariants = {
   whileInView: {
@@ -32,7 +34,7 @@ const Header = () => (
 
         <div className="tag-cmp app__flex">
           <p className="p-text">Full Stack Engineer</p>
-          <p className="p-text">Content Creator</p>
+          <p className="p-text">and Professional</p>
         </div>
       </div>
     </motion.div>
@@ -57,7 +59,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.reactlogo, images.awslogo, images.githublogo].map((circle, index) => (
+      {[images.reactlogo, images.awslogo, images.githublogo, images.kuberneteslogo, images.dockerlogo, images.javalogo].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
@@ -65,6 +67,6 @@ const Header = () => (
     </motion.div>
   </div>
 );
-export default Header
+export default AppWrap(Header, 'home')
 
 
