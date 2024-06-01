@@ -24,18 +24,20 @@ const Header = () => (
       className="app__header-info"
     >
       <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
-          {/* <span>👋</span> */}
+        {/* <div className="badge-cmp app__flex">
+          <span>👋</span>
           <div style={{ marginLeft: 20 }}>
-            <p className="p-text">Hello, I am</p>
+            <p className="p-text">Hello, </p>
+            
             <h1 className="head-text">Flavien</h1>
+            
           </div>
-        </div>
+        </div> */}
 
-        <div className="tag-cmp app__flex">
-          <p className="p-text">Full Stack Engineer</p>
-          <p className="p-text">and Professional</p>
-        </div>
+        {/* <div className="tag-cmp app__flex">
+          <p className="p-text"> I am a Full Stack Engineer,</p>
+          <p className="p-text">and a Professional</p>
+        </div> */}
       </div>
     </motion.div>
 

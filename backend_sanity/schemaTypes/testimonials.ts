@@ -17,7 +17,7 @@ export const testimonials = defineType({
             type: 'string'
         },
                     {
-            name: 'imageurl',
+            name: 'imgurl',
             title: 'ImgURL',
             type: 'image',
             options: {
