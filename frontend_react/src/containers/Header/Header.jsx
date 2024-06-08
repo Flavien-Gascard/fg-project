@@ -18,13 +18,13 @@ const scaleVariants = {
 
 const Header = () => (
   <div className="app__header app__flex">
-    <motion.div
+    {/* <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
-        {/* <div className="badge-cmp app__flex">
+        <div className="badge-cmp app__flex">
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, </p>
@@ -32,14 +32,14 @@ const Header = () => (
             <h1 className="head-text">Flavien</h1>
             
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="tag-cmp app__flex">
+        <div className="tag-cmp app__flex">
           <p className="p-text"> I am a Full Stack Engineer,</p>
           <p className="p-text">and a Professional</p>
-        </div> */}
+        </div>
       </div>
-    </motion.div>
+    </motion.div> */}
 
     <motion.div
       whileInView={{ opacity: [0, 1] }}
@@ -61,7 +61,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.reactlogo, images.awslogo, images.githublogo, images.kuberneteslogo, images.dockerlogo, images.javalogo].map((circle, index) => (
+      {[images.reactlogo, images.awslogo, images.javascriptlogo].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
