@@ -12,6 +12,9 @@ import dockerlogo from '../assets/docker-logo.png';
 import bgIMG from '../assets/bgIMG.png';
 import mobile from '../assets/mobile.png';
 import email from '../assets/email.png';
+import frontendlogo from '../assets/front-end-logo.png';
+import devopslogo from '../assets/dev-ops-logo.png';
+import backendlogo from '../assets/back-end-logo.png';
 
 export default {
     logo,
@@ -27,5 +30,8 @@ export default {
     dockerlogo,
     bgIMG,
     mobile,
-    email
+    email,
+    frontendlogo,
+    backendlogo,
+    devopslogo
 };

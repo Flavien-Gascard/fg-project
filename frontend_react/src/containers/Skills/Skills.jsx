@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-// import ReactTooltip from 'react-tooltip';
-
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
@@ -31,10 +29,11 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div
+            key={skill.name + skill.bgColor}
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: .5 }}
               className="app__skills-item app__flex"
-              key={skill.name}
+            
             >
               <div
                 className="app__flex"
