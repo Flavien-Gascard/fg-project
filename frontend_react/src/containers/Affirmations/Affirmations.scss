@@ -1,10 +1,10 @@
-.app__testimonial {
+.app__Affirmations {
     flex: 1;
     width: 100%;
     flex-direction: column;
   }
   
-  .app__testimonial-item {
+  .app__Affirmations-item {
     width: 60%;
     min-height: 320px;
     background-color: var(--white-color);
@@ -41,7 +41,7 @@
     }
   }
   
-  .app__testimonial-content {
+  .app__Affirmations-content {
     flex: 1;
     height: 100%;
     padding: 0 2rem;
@@ -86,7 +86,7 @@
     }
   }
   
-  .app__testimonial-btns {
+  .app__Affirmations-btns {
     flex-direction: row;
     margin-top: 1rem;
   
@@ -125,7 +125,7 @@
     }
   }
   
-  .app__testimonial-brands {
+  .app__Affirmations-brands {
     width: 80%;
     flex-wrap: wrap;
     margin-top: 2rem;
