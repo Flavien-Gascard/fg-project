@@ -31,7 +31,7 @@ const Affirmations = () => {
     return (
       
       <>
-      <h2 className="head-text">Affirmations And Accomplishments</h2>
+      <h2 className="head-text"><span>Affirmations</span></h2>
         {testimonials.length && (
           <>
             <div className="app__Affirmations-item app__flex">
