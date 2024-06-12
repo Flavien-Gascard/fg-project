@@ -6,10 +6,10 @@
   background-repeat: no-repeat;
   background-size: 35%;
   background-position: center;
-
-
+  
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    background-size: 200%;
   }
 }
 
