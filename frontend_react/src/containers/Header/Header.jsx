@@ -66,9 +66,9 @@ const Header = () => (
         <motion.div 
         className="circle-cmp app__flex" 
         // key={`circle-${index}`}
-        whileHover={{ scale: 3, rotate: 360, zIndex:1}}
+        whileTap={{ scale: 3, rotate: 360, zIndex:1}}
         transition={{ duration: 0.5 }}
-        whileTap={{ scale: 0.8 }}    // Scale down to 0.8 on tap
+        // whileTap={{ scale: 0.8 }}    // Scale down to 0.8 on tap
         >
           <img src={images.javalogo} alt="profile_bg" />
         </motion.div>
@@ -76,7 +76,7 @@ const Header = () => (
       <motion.div 
         className="circle-cmp app__flex" 
         // key={`circle-${index}`}
-        whileHover={{ scale: 3, rotate: 360, zIndex:1}}
+        whileTap={{ scale: 3, rotate: 360, zIndex:1}}
         transition={{ duration: 0.5 }}
         >
           <img src={images.reactlogo} alt="profile_bg" />
@@ -85,7 +85,7 @@ const Header = () => (
         <motion.div 
         className="circle-cmp app__flex" 
         // key={`circle-${index}`}
-        whileHover={{ scale: 3, rotate: 360, zIndex:1}}
+        whileTap={{ scale: 3, rotate: 360, zIndex:1}}
         transition={{ duration: 0.5 }}
         >
           <img src={images.awslogo} alt="profile_bg" />
