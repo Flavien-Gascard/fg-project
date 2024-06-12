@@ -19,7 +19,6 @@
       background-color: #fff;
       color: #000;
       font-weight: 800;
-  
       cursor: pointer;
       transition: all 0.3s ease;
       margin: 0.5rem;
@@ -68,6 +67,13 @@
         width: 470px;
         padding: 1.25rem;
         border-radius: 0.75rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;  /* Ensure the item takes full width */
+        margin: 1rem; /* Adjusted margin for mobile */
+        padding: 0.5rem; /* Adjusted padding for mobile */
+        opacity: 1; /* Always show hover effect */
       }
   
       @media screen and (max-width: 300px) {
@@ -152,5 +158,10 @@
       border-radius: 10px;
       background-color: #fff;
       top: -25px;
+      @media screen and (max-width: 768px) {
+        position: static; /* Ensure the tag is positioned normally */
+        margin-top: 1rem; /* Add top margin to separate it from content */
+        opacity: 1; /* Always show hover effect */
+      }
     }
   }
