@@ -62,16 +62,38 @@ const Header = () => (
       className="app__header-circles"
       transition={{ duration: 1, ease: 'easeInOut' }}
     >
-      {[images.javascriptlogo, images.reactlogo, images.awslogo].map((circle, index) => (
+      {/* {[images.javascriptlogo, images.reactlogo, images.awslogo].map((circle, index) => ( */}
         <motion.div 
         className="circle-cmp app__flex" 
-        key={`circle-${index}`}
+        // key={`circle-${index}`}
+        whileHover={{ scale: 3, rotate: 360, zIndex:1}}
+        transition={{ duration: 0.5 }}
+        whileTap={{ scale: 0.8 }}    // Scale down to 0.8 on tap
+        >
+          <img src={images.javalogo} alt="profile_bg" />
+        </motion.div>
+      {/* ))} */}
+      <motion.div 
+        className="circle-cmp app__flex" 
+        // key={`circle-${index}`}
         whileHover={{ scale: 3, rotate: 360, zIndex:1}}
         transition={{ duration: 0.5 }}
         >
-          <img src={circle} alt="profile_bg" />
+          <img src={images.reactlogo} alt="profile_bg" />
         </motion.div>
-      ))}
+
+        <motion.div 
+        className="circle-cmp app__flex" 
+        // key={`circle-${index}`}
+        whileHover={{ scale: 3, rotate: 360, zIndex:1}}
+        transition={{ duration: 0.5 }}
+        >
+          <img src={images.awslogo} alt="profile_bg" />
+        </motion.div>
+
+
+
+
     </motion.div>
   </div>
 );
