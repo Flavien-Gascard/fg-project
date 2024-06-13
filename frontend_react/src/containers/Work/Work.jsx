@@ -69,7 +69,7 @@ const Work = () => {
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                {/* <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <a href={work.projectLink} target="_blank" rel="noreferrer">
 
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -79,16 +79,12 @@ const Work = () => {
                   >
                     <AiFillEye />
                   </motion.div>
-                </a> */}
+                </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
-                    // whileInView={{ scale: [0, 5] }}
-                    // whileHover={{ scale: [1, 0.90] }}
-                   
-                    animate={{
-                      scale:[1,3,1]
-                    }}
-                    transition={{ duration: 5 , repeat: Infinity}}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.90] }}
+                    transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
                     <AiFillGithub />
