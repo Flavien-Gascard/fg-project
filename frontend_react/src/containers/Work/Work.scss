@@ -60,7 +60,7 @@
       transition: all 0.3s ease;
   
       &:hover {
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.387);
       }
   
       @media screen and (min-width: 2000px) {
@@ -69,7 +69,7 @@
         border-radius: 0.75rem;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 850px) {
         width: 100%;  /* Ensure the item takes full width */
         margin: 1rem; /* Adjusted margin for mobile */
         padding: 0.5rem; /* Adjusted padding for mobile */
@@ -109,7 +109,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
   
     border-radius: 0.5rem;
     opacity: 0;
@@ -119,7 +119,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.75);
       color: #fff;
   
       margin: 1rem;
@@ -158,10 +158,11 @@
       border-radius: 10px;
       background-color: #fff;
       top: -25px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 850px) {
         position: static; /* Ensure the tag is positioned normally */
         margin-top: 1rem; /* Add top margin to separate it from content */
         opacity: 1; /* Always show hover effect */
+        
       }
     }
   }

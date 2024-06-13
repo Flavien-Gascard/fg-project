@@ -1,7 +1,8 @@
 import logo from '../assets/logo.png';
 import bgWhite from '../assets/bgWhite.png';
 import profile from '../assets/profile.png';
-import circle from '../assets/circle.svg';
+import circle1 from '../assets/circle.svg';
+import circle2 from '../assets/circle2.png';
 import awslogo from '../assets/aws-logo.png';
 import githublogo from '../assets/github-logo.png';
 import javalogo from '../assets/java-logo.png';
@@ -20,7 +21,8 @@ export default {
     logo,
     bgWhite,
     profile,
-    circle,
+    circle1,
+    circle2,
     awslogo,
     githublogo,
     javalogo,
