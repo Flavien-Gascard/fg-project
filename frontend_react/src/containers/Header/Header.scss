@@ -14,29 +14,53 @@
     }
   }
 }
-
+// Main Container
 .app__header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   margin-top: 8rem;
   border: 2px solid red;
-
-
-.app__header-img{
-position: relative;
-}
-.header_image{
-  position: absolute;
-  width: 100%;
 }
 
-  .header_image {
-    border: 2px solid rgb(0, 68, 128);
-  }
+.app__header-img,
+.app__thoughts-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-
+.app__header-img {
+  position: relative;
 
 }
+
+.header__circle {
+
+}
+
+.header__profile {
+  position: absolute; /* Position within the circle */
+
+}
+
+/* Styles for the thoughts column */
+.app__thoughts-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: flex-start; /* Align items to the top */
+  margin-left: 20px; /* Space between header and thoughts */
+}
+
+/* Styles for the thinking images */
+.thinking__java,
+.thinking__aws {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Space between images */
+}
+
