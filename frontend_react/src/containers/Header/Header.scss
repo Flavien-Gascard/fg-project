@@ -8,7 +8,6 @@
 .header {
   width: 100%;
   display: flex;
-  border: 5px solid red;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -20,7 +19,6 @@
 
 .profile {
   position: relative;
-  border: 5px solid purple;
   width: 750px;
   height: 750px;
 
@@ -71,7 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 5px solid yellow;
+  
 img{
   z-index: 2;
 }
