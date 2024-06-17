@@ -1,66 +1,82 @@
 #home {
-  position: relative;
+
   background: url("../../assets/bgIMG.png");
-  background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-size: cover;
+}
 
-  // disable the default padding styles
-  .app__wrapper {
-    padding: 0;
+.header {
 
-    .copyright {
-      display: none;
+  width: 100%;
+  display: flex;
+  border: 5px solid red;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (min-width:2000px) {
+    margin-top: 4rem;
+  }
+}
+
+.profile {
+  position: relative;
+  border: 5px solid purple;
+  width: 750px;
+  height: 750px;
+
+  @media screen and (max-width: 1000px) {
+    width: 650px;
+    height: 650px;
+  }
+  @media screen and (max-width: 875px) {
+    width: 450px;
+    height: 450px;
+  }
+  @media screen and (max-width: 675px) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.profile_circle {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  border-radius: 50%;
+}
+
+.profile_image {
+  position: absolute;
+  object-fit: cover;
+margin-top: 5px;
+  padding-left: 18px;
+  width: 98%;
+  height: 98%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  border: 5px solid yellow;
+
+  @media screen and (max-width: 1240px) {
+    flex-direction: row;
+  }
+
+
+
+  @media screen and (max-width: 1000px) {
+    max-width: 100%;
+    img {
+      max-width: calc(90% /3);
     }
   }
 }
-// Main Container
-.app__header {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 8rem;
-  border: 2px solid red;
-}
-
-.app__header-img,
-.app__thoughts-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.app__header-img {
-  position: relative;
-
-}
-
-.header__circle {
-
-}
-
-.header__profile {
-  position: absolute; /* Position within the circle */
-
-}
-
-/* Styles for the thoughts column */
-.app__thoughts-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  justify-content: flex-start; /* Align items to the top */
-  margin-left: 20px; /* Space between header and thoughts */
-}
-
-/* Styles for the thinking images */
-.thinking__java,
-.thinking__aws {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  margin-bottom: 10px; /* Space between images */
-}
-
