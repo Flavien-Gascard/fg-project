@@ -9,16 +9,16 @@ const Header = () => (
 
     <div className='profile'>
       <motion.img
-        whileInView={{ scale: [0, 2,1], rotate: [0, 360, -360, 0] }}
-        transition={{duration: 1, ease: 'linear' }}
+        whileInView={{ scale: [0,1.5, 1], rotate: [0, 360, -360, 0], opacity:[0,1] }}
+        transition={{duration: 2, ease: 'linear' }}
         src={images.headerCircle}
         alt="profile_circle"
         className="profile_circle"
       />
 
       <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1.5, ease: 'easeInOut' }}
+        whileInView={{ scale: [0, 1], rotate: [0, 360], opacity:[0,1]  }}
+        transition={{ duration: 2, ease: 'easeInOut' }}
         src={images.profile}
         alt="profile_image"
         className="profile_image"
