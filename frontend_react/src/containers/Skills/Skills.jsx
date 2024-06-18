@@ -23,10 +23,6 @@ const Skills = () => {
     });
   }, []);
 
-
-
-
-
   return (
     <>
       <h2 className="head-text"><span>Skills & Experiences</span></h2>
@@ -73,33 +69,12 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.name}
-                      // key={work.name}
-                      key={`${work.name}_${index}`}
+                      // data-tip
+                      // data-for={work.name}
+                      key={`${work.name}+${index}`}
                     >
-                      <Popup className="bold-text" title={work.name} workDescription={work.desc}/>
-
-
-
-
-
-
-
-
-
-
-
+                      <Popup title={work.name} workDescription={work.desc}/>
                       <p className="p-text">{work.company}</p>
-
-
-
-
-
-
-
-
-                      {/* <p className="p-text">{work.desc}</p> */}
                     </motion.div>
                   </>
                 ))}

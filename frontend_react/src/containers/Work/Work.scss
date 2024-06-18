@@ -99,6 +99,16 @@
     @media screen and (min-width: 2000px) {
       height: 350px;
     }
+
+    @media screen and (max-width: 850px) {
+      height: 350px;
+      width:auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      height: 300px;
+      width:auto;
+    }
   }
   
   .app__work-hover {

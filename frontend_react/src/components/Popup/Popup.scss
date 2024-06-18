@@ -1,7 +1,17 @@
 
 .title {
     font-size: 28px;
+    color: grey;
 }
+
+:hover {
+    scale: 0,1,0;
+}
+
 .popup {
     font-size: 20px;
+    padding: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.297);
+    border-radius: 10px;
+    margin: 10px;
 }
