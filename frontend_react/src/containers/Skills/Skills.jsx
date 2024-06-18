@@ -1,95 +1,80 @@
 import React, { useState, useEffect } from 'react';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
-import { Popup } from '../../components';
-
 import './Skills.scss';
 
 const Skills = () => {
-  const [experiences, setExperiences] = useState([]);
-  const [skills, setSkills] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query).then((data) => {
-      setExperiences(data);
-    });
-
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-  }, []);
-
-  return (
-    <>
-      <h2 className="head-text"><span>Skills & Experiences</span></h2>
-
-      <div className="app__skills-container">
-        <motion.div className="app__skills-list"
-        >
-          {skills.map((skill, index) => (
-            <div
-              // key={skill.name}
-              key={`${skill.name}_${index}`}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: .5 }}
-              className="app__skills-item app__flex"
-            >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
-              >
-                <motion.img src={urlFor(skill.icon)} alt={skill.name}
-                  whileInView={{
-                    scale: [0, 1.5,1]}} //, rotate: [0, 360]
-                    transition={{duration:5, ease: [0.4, 0, 0.6, 1]}} //, repeat:Infinity
-                
-                />
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [testimonials, setTestimonials] = useState([]);
+    const [brands, setBrands] = useState([]);
+  
+    const handleClick = (index) => {
+      setCurrentIndex(index);
+    };
+  
+    useEffect(() => {
+      const query = '*[_type == "testimonials"]';
+      const brandsQuery = '*[_type == "brands"]';
+  
+      client.fetch(query).then((data) => {
+        setTestimonials(data);
+      });
+  
+      client.fetch(brandsQuery).then((data) => {
+        setBrands(data);
+      });
+    }, []);
+  
+    return (
+      
+      <>
+      <h2 className="head-text"><span>Affirmations</span></h2>
+        {testimonials.length && (
+          <>
+            <div className="app__Affirmations-item app__flex">
+              <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
+              <div className="app__Affirmations-content">
+                <p className="p-text">{testimonials[currentIndex].feedback}</p>
+                <div>
+                  <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
+                  <h5 className="p-text">{testimonials[currentIndex].company}</h5>
+                </div>
               </div>
-              <p className="p-text">{skill.name}</p>
             </div>
-          ))}
-        </motion.div>
-        <div className="app__skills-exp">
-          {experiences.map((experience, index) => (
-            <motion.div
-              className="app__skills-exp-item"
-              // key={experience.year}
-              key={`${experience.name}_${index}`}
-            >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
+  
+            <div className="app__Affirmations-btns app__flex">
+              <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
+                <HiChevronLeft />
               </div>
-              <motion.div className="app__skills-exp-works">
-                {experience.works.map((work, index) => (
-                  <>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                      className="app__skills-exp-work"
-                      // data-tip
-                      // data-for={work.name}
-                      key={`${work.name}+${index}`}
-                    >
-                      <Popup title={work.name} workDescription={work.desc}/>
-                      <p className="p-text">{work.company}</p>
-                    </motion.div>
-                  </>
-                ))}
-              </motion.div>
+  
+              <div className="app__flex" onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
+                <HiChevronRight />
+              </div>
+            </div>
+          </>
+        )}
+  
+        <div className="app__Affirmations-brands app__flex">
+          {brands.map((brand) => (
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5, type: 'tween' }}
+              key={brand._id}
+            >
+              <img src={urlFor(brand.imgUrl)} alt={brand.name} />
             </motion.div>
           ))}
         </div>
-      </div>
-    </>
-  );
-};
+      </>
+    );
+  };
+
+// export default Affirmations
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg',
-);
+    MotionWrap(Skills, 'app__Affirmations'),
+    'skills',
+    'app__primarybg',
+  );
