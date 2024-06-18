@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
+import { Popup } from '../../components';
+
 import './Skills.scss';
 
 const Skills = () => {
@@ -21,6 +23,10 @@ const Skills = () => {
     });
   }, []);
 
+
+
+
+
   return (
     <>
       <h2 className="head-text"><span>Skills & Experiences</span></h2>
@@ -29,22 +35,25 @@ const Skills = () => {
         <motion.div className="app__skills-list"
         >
           {skills.map((skill, index) => (
-            <motion.div
-            // key={skill.name}
-            key={`${skill.name}_${index}`} 
+            <div
+              // key={skill.name}
+              key={`${skill.name}_${index}`}
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: .5 }}
               className="app__skills-item app__flex"
-            
             >
               <div
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <motion.img src={urlFor(skill.icon)} alt={skill.name}
+                  whileInView={{
+                    scale: [1, 1.3,1]}} 
+                    transition={{duration:3, ease: [0.4, 0, 0.6, 1], repeat:Infinity}}
+                />
               </div>
               <p className="p-text">{skill.name}</p>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
         <div className="app__skills-exp">
@@ -52,7 +61,7 @@ const Skills = () => {
             <motion.div
               className="app__skills-exp-item"
               // key={experience.year}
-              key={`${experience.name}_${index}`} 
+              key={`${experience.name}_${index}`}
             >
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
@@ -67,20 +76,31 @@ const Skills = () => {
                       data-tip
                       data-for={work.name}
                       // key={work.name}
-                      key={`${work.name}_${index}`} 
+                      key={`${work.name}_${index}`}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
+                      <Popup className="bold-text" title={work.name} workDescription={work.desc}/>
+
+
+
+
+
+
+
+
+
+
+
                       <p className="p-text">{work.company}</p>
-                      <p className="p-text">{work.desc}</p>
+
+
+
+
+
+
+
+
+                      {/* <p className="p-text">{work.desc}</p> */}
                     </motion.div>
-                    {/* <ReactTooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip> */}
                   </>
                 ))}
               </motion.div>
