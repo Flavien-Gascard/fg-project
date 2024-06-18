@@ -15,7 +15,7 @@ const Header = () => (
         alt="profile_circle"
         className="profile_circle"
       />
-7
+
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1.5, ease: 'easeInOut' }}
