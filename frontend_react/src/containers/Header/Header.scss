@@ -7,11 +7,12 @@
 
 .header {
   width: 100%;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-
+border: 5px solid red;
   @media screen and (min-width:2000px) {
     margin-top: 4rem;
   }
@@ -19,6 +20,7 @@
 
 .profile {
   position: relative;
+  
   width: 750px;
   height: 750px;
 
@@ -44,57 +46,58 @@
 }
 
 .profile_circle {
+  
   position: absolute;
   object-fit: contain;
   width: 100%;
   height: 100%;
   opacity: .5;
   border-radius: 50%;
+  border: 5px solid blue;
 }
 
 .profile_image {
+  display: flex;
   position: absolute;
   object-fit: cover;
-  margin-top: 5px;
-  padding-left: 18px;
-  width: 98%;
-  height: 98%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   z-index: 1;
-
+  border: 5px solid yellow;
 }
 
-.logos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+// .logos {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
   
-img{
-  z-index: 2;
-}
-  @media screen and (min-width:1600px) {
-    img:nth-child(1) {
-      margin-right: 20rem;
-      }
+// img{
+//   z-index: 2;
+// }
+//   @media screen and (min-width:1600px) {
+//     img:nth-child(1) {
+//       margin-right: 20rem;
+//       }
       
-    img:nth-child(3) {
-      margin-right: 20rem;
-    }
-}
+//     img:nth-child(3) {
+//       margin-right: 20rem;
+//     }
+// }
 
-  @media screen and (max-width: 1240px) {
-    flex-direction: row;
-  }
+//   @media screen and (max-width: 1240px) {
+//     flex-direction: row;
+//   }
 
 
 
-  @media screen and (max-width: 1000px) {
-    max-width: 100%;
+//   @media screen and (max-width: 1000px) {
+//     max-width: 100%;
 
-    img {
-      max-width: calc(90% /3);
+//     img {
+//       max-width: calc(90% /3);
      
-    }
-  }
-}
+//     }
+//   }
+// }

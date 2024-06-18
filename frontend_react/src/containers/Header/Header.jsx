@@ -9,7 +9,7 @@ const Header = () => (
 
     <div className='profile'>
       <motion.img
-        whileInView={{ scale: [0, 1], rotate: [0, 360, -360, 0] }}
+        whileInView={{ scale: [0, 2,1], rotate: [0, 360, -360, 0] }}
         transition={{duration: 1, ease: 'linear' }}
         src={images.headerCircle}
         alt="profile_circle"
@@ -26,7 +26,7 @@ const Header = () => (
 
     </div>
 
-    <div className='logos'>
+    {/* <div className='logos'>
 
       <motion.img 
       whileInView={{ scale: [0, 2, 1], rotate: [0, 360]}}
@@ -49,7 +49,7 @@ const Header = () => (
       src={images.javalogo} 
       alt="Java Logo" />
 
-    </div>
+    </div> */}
 
   </div>
 );

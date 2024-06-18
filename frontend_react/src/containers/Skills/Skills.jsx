@@ -44,8 +44,9 @@ const Skills = () => {
               >
                 <motion.img src={urlFor(skill.icon)} alt={skill.name}
                   whileInView={{
-                    scale: [1, 1.3,1]}} 
-                    transition={{duration:3, ease: [0.4, 0, 0.6, 1], repeat:Infinity}}
+                    scale: [0, 1.5,1]}} //, rotate: [0, 360]
+                    transition={{duration:5, ease: [0.4, 0, 0.6, 1]}} //, repeat:Infinity
+                
                 />
               </div>
               <p className="p-text">{skill.name}</p>

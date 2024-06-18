@@ -111,8 +111,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 1rem;
+    padding: 15px;
+    border-radius: 10px;
     cursor: pointer;
-
+    &:hover {
+      box-shadow: 0ch 0px 30px rgba(74, 98, 255, 0.605);
+    }
     h4 {
       font-weight: 500;
     }

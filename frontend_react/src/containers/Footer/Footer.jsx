@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text"><span>Grab a coffee & let's chat!</span></h2>
+      <h2 className="head-text" style={{marginTop:'2rem'}}><span>Grab a coffee & let's chat!</span></h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">

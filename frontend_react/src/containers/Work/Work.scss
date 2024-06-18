@@ -44,9 +44,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
   
     .app__work-item {
       width: 270px;
+      height: 500px;
       flex-direction: column;
   
       margin: 2rem;
@@ -56,8 +58,9 @@
       color: #000;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0ch 0px 30px rgba(0, 0, 0, 0.385);
       &:hover {
-        box-shadow: 0ch 0px 30px rgba(0, 0, 0, 0.387);
+        box-shadow: 0ch 0px 30px rgba(74, 98, 255, 0.605);
       }
   
       @media screen and (min-width: 2000px) {
