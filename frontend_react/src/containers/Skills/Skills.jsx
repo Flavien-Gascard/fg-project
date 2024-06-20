@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
@@ -8,7 +8,7 @@ import './Skills.scss';
 const Skills = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [testimonials, setTestimonials] = useState([]);
-    const [brands, setBrands] = useState([]);
+ 
   
     const handleClick = (index) => {
       setCurrentIndex(index);
@@ -16,26 +16,21 @@ const Skills = () => {
   
     useEffect(() => {
       const query = '*[_type == "testimonials"]';
-      const brandsQuery = '*[_type == "brands"]';
+
   
       client.fetch(query).then((data) => {
         setTestimonials(data);
       });
-  
-      client.fetch(brandsQuery).then((data) => {
-        setBrands(data);
-      });
     }, []);
   
     return (
-      
       <>
-      <h2 className="head-text"><span>Affirmations</span></h2>
+      <h2 className="head-text"><span>Skills</span></h2>
         {testimonials.length && (
           <>
-            <div className="app__Affirmations-item app__flex">
+            <div className="skills_item app__flex">
               <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
-              <div className="app__Affirmations-content">
+              <div className="skills_content">
                 <p className="p-text">{testimonials[currentIndex].feedback}</p>
                 <div>
                   <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
@@ -44,7 +39,7 @@ const Skills = () => {
               </div>
             </div>
   
-            <div className="app__Affirmations-btns app__flex">
+            <div className="skills_btns app__flex">
               <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
                 <HiChevronLeft />
               </div>
@@ -55,26 +50,12 @@ const Skills = () => {
             </div>
           </>
         )}
-  
-        <div className="app__Affirmations-brands app__flex">
-          {brands.map((brand) => (
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5, type: 'tween' }}
-              key={brand._id}
-            >
-              <img src={urlFor(brand.imgUrl)} alt={brand.name} />
-            </motion.div>
-          ))}
-        </div>
       </>
     );
   };
 
-// export default Affirmations
-
 export default AppWrap(
-    MotionWrap(Skills, 'app__Affirmations'),
+    MotionWrap(Skills, 'app__skills'),
     'skills',
     'app__primarybg',
   );

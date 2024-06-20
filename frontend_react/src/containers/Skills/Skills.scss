@@ -1,4 +1,4 @@
-.app__Affirmations {
+.app__skills {
     flex: 1;
     width: 100%;
     flex-direction: column;
@@ -8,7 +8,7 @@ h2 {
 }
 
   }
-  .app__Affirmations-item {
+  .skills_item {
     width: 80%;
     min-height: 320px;
     background-color: var(--white-color);
@@ -45,7 +45,7 @@ h2 {
     }
   }
   
-  .app__Affirmations-content {
+  .skills_content {
     flex: 1;
     height: 100%;
     padding: 0 2rem;
@@ -90,7 +90,7 @@ h2 {
     }
   }
   
-  .app__Affirmations-btns {
+  .skills_btns {
     flex-direction: row;
     margin-top: 1rem;
   
@@ -129,40 +129,3 @@ h2 {
     }
   }
   
-  .app__Affirmations-brands {
-    width: 80%;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  
-    div {
-      width: 150px;
-      margin: 1.5rem;
-  
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        filter: grayscale(1);
-      }
-  
-      &:hover {
-        img {
-          filter: grayscale(0);
-        }
-      }
-  
-      @media screen and (min-width: 2000px) {
-        width: 210px;
-        margin: 2rem;
-      }
-  
-      @media screen and (max-width: 450px) {
-        width: 120px;
-        margin: 1rem;
-      }
-    }
-  
-    @media screen and (max-width: 800px) {
-      width: 100%;
-    }
-  }
